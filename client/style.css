@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial;
+}
+.container{
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.left-box{
+    width: 30%;
+    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+}
+.right-box{
+    width: 70%;
+    border-right: 1px solid #e6e6e6;
+}
+#popup{
+    /* display: none; */
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content{
+    width:400px;
+    height: 200px;
+    padding:20px;
+    background-color: white;
+    border-radius: 5px;
+}
+.form-box{
+    height: 10%;
+    padding: 20px;
+    border-top: 1px solid #e6e6e6;
+}
+#messages-list{
+      height: 90%;
+      padding: 20px;
+      overflow: auto;
+}
+.online-users{
+    height: 100%;
+}
+.online-users h3{
+      margin: 0;
+      padding: 20px;
+}
+#online-users-list{
+    border-top: 1px solid #e6e6e6;
+    overflow: auto;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    height: calc(100% - 62px);
+}
+#online-users-list li{
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.message-container{
+      display: flex;
+      margin-bottom: 20px;
+}
+.message-body .message-sender{
+    margin: 0 0 10px 0;
+}
+.message-body .message-text{
+    padding: 10px;
+    background: #ebebeb;
+    border-radius: 10px;
+}
+.message-body .message-date{
+    color: #828282;
+    margin-top: 2px;
+    font-style: italic;
+    font-size: 12px;
+}
+.message-container figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: gray;
+    color: white;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;
+}
+.message-container.current{
+    flex-direction: row-reverse;
+}
+.message-container.current .message-body .message-text {
+    background: #0a80ff;
+    color: white
+}
+.message-container.current figure {
+    margin: 0 0 0 20px;
+}
+.message-container.current .message-body .message-sender,
+.message-container.current .message-body .message-date {
+    text-align: right;
+}
+#message-input, #username-input{
+    display: inline-block;
+    padding: 10px;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 100%;
+}
+#username-input{
+    width: auto;
+}
+#send-message, #send-username{
+    padding: 10px;
+    border-radius: 5px;
+    background: #0a80ff;
+    color: white;
+    border: 1px solid #0a80ff;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+
+      <section class="left-box">
+        
+        <div class="online-users">
+          <h3>Online Users</h3>
+          <ul id="online-users-list">
+
+          </ul>
+        </div>
+
+      </section>
+      <section class="right-box">
+
+        <div id="messages-list">
+
+        </div>
+
+        <div class="form-box">
+          <input type="text" id="message-input" placeholder="Your message">
+          <button id="send-message">Send</button>
+        </div>
+        
+      </section>
+    </div>
+  </main>
+
+  <div id="popup">
+    <div class="popup-content">
+      <h4>Enter your name</h4>
+      <input type="text" id="username-input" placeholder="Username">
+      <button id="send-username">Confirm</button>
+    </div>
+  </div>
+    
+  <script src="index.js"></script>
+</body>
+</html>
